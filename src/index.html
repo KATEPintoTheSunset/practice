@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="./dist/bundle.js"></script>
+  <title>LoginForm</title>
+</head>
+<body>
+  <section class="login__wrapper">
+    <div class="login__status" id="status">
+      <p class="login__status_txt" id="status_txt">Enter email and password</p>
+    </div>
+    <div class="login__form">
+      <div class="login__form_content">
+        <p class="login__form_txt">Email</p>
+        <input class="login__form__inpt" type="email" onblur="validationEmail(value)" name="" id="email">
+      </div>
+      <div class="login__form_content">
+        <p class="login__form_txt">Password</p>
+        <input class="login__form__inpt" type="password" name="" id="password">
+      </div>
+      <button class="login__form_btn" type="submit" onclick="submit()">Submit</button>
+    </div>
+  </section>
+</body>
+</html>
