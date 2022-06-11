@@ -26,16 +26,6 @@ p {
   padding: 5px;
 }
 
-.fail {
-  border: 3px solid brown;
-  box-shadow: inset 0px 0px 5px 0px brown;
-}
-
-.success {
-  border: 3px solid green;
-  box-shadow: inset 0px 0px 5px 0px green;
-}
-
 .login__form {
   display: flex;
   flex-wrap: wrap;
@@ -80,4 +70,14 @@ p {
 .login__form__inpt:focus {
   outline:none;
   border: 3px solid whitesmoke;
+}
+
+.fail {
+  border: 3px solid brown;
+  box-shadow: inset 0px 0px 5px 0px brown;
+}
+
+.success {
+  border: 3px solid green;
+  box-shadow: inset 0px 0px 5px 0px green;
 }

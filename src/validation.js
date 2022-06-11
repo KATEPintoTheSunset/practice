@@ -1,12 +1,4 @@
-export default function validationEmail(email) {
-    if (email === "") {
-      document.getElementById("email").classList.add("fail");
-    }else {
-      if (/@+yandex|gmail|outlook+.com$/.test(email)) {
-        return email;
-      }else {
-        document.getElementById("email").classList.add("fail");
-      }
-      console.log(/@yandex|gmail|outlook.com$/.test(email))
-    }
-}
+const validationEmail = (email) => /\w{4,}@(yandex|gmail|outlook).com$/.test(email);
+const validationPassword = (password) => /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/.test(password);
+
+export {validationEmail, validationPassword}
