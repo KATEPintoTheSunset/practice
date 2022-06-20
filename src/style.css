@@ -1,83 +1,88 @@
 body {
-  margin: 20% 0;
-  background-color: mistyrose;
+    margin: 20% 0;
+    background-color: mistyrose;
 }
 
 .login__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
 }
 
 p {
-  margin: 0;
-  padding: 5px;
-  font-size: 2em;
-  font-family: monospace;
+    margin: 0;
+    padding: 5px;
+    font-size: 2em;
+    font-family: monospace;
 }
 
 .login__status {
-  background-color: whitesmoke;
-  border: 3px solid whitesmoke;
-  width: 370px;
-  border-radius: 10px;
-  margin-bottom: 15px;
-  padding: 5px;
+    background-color: whitesmoke;
+    border: 3px solid whitesmoke;
+    width: 370px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 5px;
 }
 
 .login__form {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  background-color: whitesmoke;
-  border: 3px solid whitesmoke;
-  border-radius: 10px;
-  padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: whitesmoke;
+    border: 3px solid whitesmoke;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .login__form_content {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 5px;
 }
 
 .login__form_btn {
-  margin-top: 50px;
-  box-shadow: 0px 0px 5px 0px rosybrown;
-  background-color: mistyrose;
-  border: 3px solid whitesmoke;
-  border-radius: 10px;
-  font-size: 2em;
-  font-family: monospace;
+    margin-top: 30px;
+    box-shadow: 0px 0px 5px 0px rosybrown;
+    background-color: mistyrose;
+    border: 3px solid whitesmoke;
+    border-radius: 10px;
+    font-size: 2em;
+    font-family: monospace;
 }
 
 .login__form_btn:hover {
-  background-color: whitesmoke;
-  cursor: pointer;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+.signUp {
+    background-color: powderblue;
+    margin-top: 15px;
 }
 
 .login__form__inpt {
-  box-shadow: 0px 0px 5px 0px rosybrown;
-  background-color: whitesmoke;
-  border: 3px solid mistyrose;
-  border-radius: 10px;
-  font-size: 2em;
-  font-family: monospace;
+    box-shadow: 0px 0px 5px 0px rosybrown;
+    background-color: whitesmoke;
+    border: 3px solid mistyrose;
+    border-radius: 10px;
+    font-size: 2em;
+    font-family: monospace;
 }
 
 .login__form__inpt:focus {
-  outline:none;
-  border: 3px solid whitesmoke;
+    outline: none;
+    border: 3px solid whitesmoke;
 }
 
 .fail {
-  border: 3px solid brown;
-  box-shadow: inset 0px 0px 5px 0px brown;
+    border: 3px solid brown;
+    box-shadow: inset 0px 0px 5px 0px brown;
 }
 
 .success {
-  border: 3px solid green;
-  box-shadow: inset 0px 0px 5px 0px green;
+    border: 3px solid green;
+    box-shadow: inset 0px 0px 5px 0px green;
 }
