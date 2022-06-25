@@ -30,7 +30,6 @@ async function signUp(emailInput, passwordInput) {
 
         document.getElementById('status').classList.add('success');
         document.getElementById('status_txt').innerHTML = 'Success';
-        console.log(await response.json());
     } catch (error) {
         document.getElementById('status').classList.add('fail');
         document.getElementById('status_txt').innerHTML = error.message;
