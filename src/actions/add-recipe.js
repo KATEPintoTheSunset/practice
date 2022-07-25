@@ -1,7 +1,4 @@
-import * as validate from '../core/validation';
-import { ip } from "../config";
-
-async function login(emailInput, passwordInput) {
+async function addRecipe(emailInput, passwordInput) {
     const headers = new Headers();
     headers.append('Content-Type', 'application/json');
     headers.append('Accept', 'application/json');
@@ -13,11 +10,16 @@ async function login(emailInput, passwordInput) {
     }
 
     try {
-        const response = await fetch(`http://${ip}/ica/api/auth/login`, {
+        const response = await fetch(`http://${ip}/ica/api/recipes`, {
             method: 'POST',
             body: JSON.stringify({
-                email: emailInput.value,
-                password: passwordInput.value,
+                "name": "Mesivo",
+                "products": [
+                    {
+                        "productId": 1,
+                        "amount": 300
+                    }
+                ]
             }),
             mode: 'cors',
             headers,
@@ -31,11 +33,10 @@ async function login(emailInput, passwordInput) {
 
         document.getElementById('status').classList.add('success');
         document.getElementById('status_txt').innerHTML = 'Success';
-        return response.json();
     } catch (error) {
         document.getElementById('status').classList.add('fail');
         document.getElementById('status_txt').innerHTML = error.message;
     }
 }
 
-export { login };
+export { addRecipe }

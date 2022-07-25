@@ -20,7 +20,13 @@ async function addProductToRecipe() {
     productCountInput.min = 1;
     productCountInput.max = 1000;
 
-    container.append(list, productGram, productCountInput);
+    const btnDel = createComponent('btn', 'login__form_btn', 'del');
+    btnDel.innerHTML = '-';
+    btnDel.addEventListener('click', () => {
+        container.remove();
+    });
+
+    container.append(list, productGram, productCountInput, btnDel);
 
     return container;
 }

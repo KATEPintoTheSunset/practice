@@ -10,7 +10,7 @@ const createRecipeList = async () => {
     const btnAdd = createComponent('btn', 'login__form_btn', 'add');
     btnAdd.innerHTML = '+';
     btnAdd.addEventListener('click', () => {
-        document.getElementsByClId('rec').classList.toggle('recipes-close');
+        document.getElementById('rec').classList.remove('recipes-closed');
     });
     container.append(await createRecipesForm(), btnAdd);
 
@@ -20,11 +20,8 @@ const createRecipeList = async () => {
         product.innerHTML = products[i].name;
         list.append(product);
     }
-
-    const containerNewRecipes = createComponent('div', 'recipes__wrapper recipes-closed', 'rec');
-    containerNewRecipes.append(await addRecipes());
     
-    document.body.append(container, list, containerNewRecipes);
+    document.body.append(container, list, await addRecipes());
 };
 
 export { createRecipeList };

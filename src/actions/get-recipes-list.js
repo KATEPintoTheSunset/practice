@@ -1,3 +1,5 @@
+import { ip } from "../config";
+
 async function getList() {
     const headers = new Headers();
     headers.append('Content-Type', 'application/json');
@@ -6,7 +8,7 @@ async function getList() {
     headers.append('auth-token', localStorage.getItem('token'));
 
     try {
-        const response = await fetch('http://192.168.31.110:3105/ica/api/recipes?my=true', {
+        const response = await fetch(`http://${ip}/ica/api/recipes?my=true`, {
             method: 'GET',
             headers,
         });

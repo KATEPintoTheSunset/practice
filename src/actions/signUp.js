@@ -1,4 +1,5 @@
 import * as validate from '../core/validation';
+import { ip } from "../config";
 
 async function signUp(emailInput, passwordInput) {
     const headers = new Headers();
@@ -12,7 +13,7 @@ async function signUp(emailInput, passwordInput) {
     }
 
     try {
-        const response = await fetch('http://192.168.31.110:3105/ica/api/auth/signUp', {
+        const response = await fetch(`http://${ip}/ica/api/auth/signUp`, {
             method: 'POST',
             body: JSON.stringify({
                 email: emailInput.value,
